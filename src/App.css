@@ -2,7 +2,8 @@
     font-family: 'SpaceGrotesk';
     src: url('./fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf') format('truetype');
 }
-
+   /* color: aqua; */
 body{
-    font: 'SpaceGrotesk';
+    font-family: 'SpaceGrotesk';
+  
 }

@@ -7,7 +7,9 @@ import Menu from './components/Menu';
 import { BrowserRouter as Router, Route , Routes } from 'react-router-dom';
 import Graphics from './components/Graphics';
 import Art from './components/Art';
-import About from "./components/About"
+import About from "./components/About";
+import Films from "./components/Films";
+
 
 
 function App() {
@@ -21,12 +23,13 @@ function App() {
       <h1>Paul Henderson</h1>
       <h2>designer</h2>
       <Menu/>
-      
+      {/* <img src="./images/graphicdesignlogosmall.jpg" alt="" /> */}
       <Routes>
-      <Route  path='/Graphics' element={<Graphics />}></Route>  
-      <Route  path='/' element={<></>}></Route>
-      <Route path= '/Art' element = {<Art/>}></Route>
-      <Route path= '/About' element = {<About/>}></Route>
+      <Route  path='/' element={<><Graphics /><Art/><Films/></>}></Route>
+      <Route  path='/graphics' element={<Graphics />}></Route>  
+      <Route path= '/art' element = {<Art/>}></Route>
+      <Route path= '/about' element = {<About/>}></Route>
+      <Route path= '/films' element = {<Films/>}></Route>
       </Routes>
       {/* <Checklist setList={setList} list={list} />
       <input ref={submitButton}

@@ -7,14 +7,20 @@ export default function CarouselItem({ imgUrl, imgTitle }) {
         width: 300,
         display: "flex",
         justifyContent: "center",
-        border: "2px solid red",
       }}
     >
       <img
         src={imgUrl}
         alt={imgTitle}
-        // width={300}
-        style={{ objectFit: "cover", borderRadius: "3px" }}
+        style={{
+          borderRadius: "6px",
+          objectFit: "contain",
+          width: "100%",
+          height: "100%",
+          padding: "15px",
+          // margin: "20px",
+          boxSizing: "border-box",
+        }}
       />
     </div>
   );

@@ -5,6 +5,7 @@
     position: relative;
     height: 300px;
     /* border-color: #4b5563; */
+    width: max-content;
   
     display: flex;
   }
@@ -12,6 +13,7 @@
   .carousel-card {
     display: flex;
     height: 400px;
+    opacity: 95%;
     /* justify-content: center;
     align-items: center; */
     /* width: 100%;
@@ -44,12 +46,17 @@
     height: 80px; */
     /* gap: 16px; */
     width: 200%;  
-    height: 300px;
-    animation: slide 50s linear infinite;
+    height: 400px;
+    animation: slide 100s linear infinite;
     /* background-color: rgb(23, 23, 23); */
 }
 .secondFastest {
-    animation: slide 30s linear infinite;
+    animation: slide 50s linear infinite;
+    height: 400px;
+    padding: 20px;
+    opacity: 90%;
+    
+    
     /* background-color: aquamarine; */
 }
 /* .carousel-track:nth-of-type(2){

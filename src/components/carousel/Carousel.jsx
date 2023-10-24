@@ -12,7 +12,7 @@ export default function Carousel({ cardDetails, className }) {
     >
       <div
         className={`carousel-track ${className ? className : ""}`}
-        style={{ border: "2px solid blue" }}
+        //style={{ border: "2px solid blue" }}
       >
         {cardDetails.map((detailKey, index) => {
           return (

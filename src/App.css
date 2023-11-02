@@ -2,8 +2,108 @@
     font-family: 'SpaceGrotesk';
     src: url('./fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf') format('truetype');
 }
+:root{
+    --background-dark:black;
+    --background-light:white;
+    --color-text-dark-mode:white; 
+    --color-text-light-mode:black; 
+    --menu-text-color:  rgb(246, 217, 217);
+}
    /* color: aqua; */
-body{
+body, .dark-mode{
+   background-color: var(--background-dark);
+   color: var(--color-text-dark-mode);
     font-family: 'SpaceGrotesk';
   
 }
+
+.light-mode{
+    background-color:var( --background-light );
+    color: var(--color-text-light-mode);
+}
+
+
+
+/* @media (prefers-color-scheme: dark) {
+    :root{
+        --background-color:black;
+        --color:white; 
+        --menu-text-color: rgb(246, 217, 217);
+    }
+   
+  } */
+
+  @keyframes expandCircle {
+    0%{
+        r:300;
+        fill: blue;
+        cy: 500;
+    }
+    50%{
+        r:500;
+        fill: red;
+        cy: 300;
+    }
+    100%{
+        r:300;
+        fill: blue;
+        cy: 500;
+    }
+
+    
+
+
+  }
+
+  #svg_css_ex1:hover path {
+    d: path(
+        "M -8.4653702,-107.80871 H -85.823233 L -1.5378004,25.739445 -86.977828,161.59679 H -13.85348 L 36.948699,75.002164 87.750877,161.59679 H 160.87523 L 75.435198,25.739445 159.72063,-107.80871 H 82.362767 L 36.948699,-25.447599 Z"
+      
+    );
+  }
+
+  @keyframes rotateCircle{
+
+    0%{
+        transform: rotate(0deg);
+        fill: aquamarine;
+    }
+    50%{
+        transform: rotate(100deg);
+        fill: blanchedalmond;
+    }
+    100%{
+        fill: aquamarine;
+    }
+        
+  }
+
+
+  #myCircle.clicked{
+
+    transform: scale(2);
+    transition: transform 0.5s ease, fill 0.5s ease;
+  }
+
+
+/* #myCircle:hover{
+    stroke: purple;
+} */
+
+  #myCircle{
+    /* animation: expandCircle 2s infinite; */
+    transform-origin: 50% 50%;
+    transition: all 0.5s ease;
+  }
+
+
+  .animated-box {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    border: 2px solid black;
+  }
+  

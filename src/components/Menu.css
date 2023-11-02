@@ -21,19 +21,26 @@
 
 a {
     text-decoration: none;
-    color: rgb(49, 46, 46); /* Or any other color you prefer */
-  }
-  
-  a:hover {
-    color: rgb(0, 187, 255); /* Or any other color you prefer */
+    /* color:  var(--menu-text-color);  */
   }
 
+  a:not(.active):visited{
+    color: inherit;
+  }
+  
+
+
+    
   .active{
     color:rgb(0, 187, 255); 
    
   }
+  a:hover, a:visited:hover {
+    color: rgb(0, 187, 255); /* Or any other color you prefer */
+  }
 
-   @keyframes slidein {
+
+   /* @keyframes slidein {
     from {
       transform: translateX(0%);;
      
@@ -50,10 +57,10 @@ a {
     position: relative;
     
     
-    /* animation: slidein 7s linear infinite; Adjust duration as needed */
+    
 
     width: 100%;
-  }
+  } 
 /* 
   img {
    /*  max-width: 100%; Ensure images don’t overflow the container */

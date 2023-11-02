@@ -19,8 +19,8 @@
     /* width: 100%;
     height: 100%; */
   
-    /* border-radius: 20%;
-    background: rgb(41, 40, 40); */
+    
+    /* background: rgb(41, 40, 40); */ 
   }
 
   /* .carousel-card:hover {
@@ -51,13 +51,31 @@
     /* background-color: rgb(23, 23, 23); */
 }
 .secondFastest {
-    animation: slide 50s linear infinite;
+    animation: slide 500s linear infinite;
+    height: 400px;
+    padding: 20px;
+    opacity: 90%;
+    /* //border-radius: 30px; */
+    
+    
+    /* background-color: aquamarine; */
+}
+.firstCaroselPortraits {
+    animation: slide 200s linear infinite;
     height: 400px;
     padding: 20px;
     opacity: 90%;
     
     
     /* background-color: aquamarine; */
+}
+
+.secondPortraitsGoingInReverse{
+  animation: slideReverse 190s linear infinite;
+  height: 400px;
+  padding: 20px;
+  opacity: 90%;
+  
 }
 /* .carousel-track:nth-of-type(2){
  
@@ -66,10 +84,10 @@
     animation-delay: 10s;
 } */
 
-.carousel-track:hover {
+/* .carousel-track:hover {
     animation-play-state: paused;
     height: 300px;
-}
+} */
 
 /* need more delay here and other key frames and do dosplay flex */
 
@@ -82,5 +100,16 @@
     100% {
         /* transform: translateX(-100%); */
         left: -100%
+    }
+}
+@keyframes slideReverse {
+    0% {
+        /* transform: translateX(0%);  */
+        left: -100%;
+    }
+ 
+    100% {
+        /* transform: translateX(-100%); */
+        left: 0;
     }
 }

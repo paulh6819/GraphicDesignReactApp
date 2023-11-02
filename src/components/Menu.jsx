@@ -1,33 +1,32 @@
 import React from "react";
 import "./Menu.css";
 import "../App.css";
-import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom"; // Import NavLink
+import { useLocation, NavLink } from "react-router-dom";
 
 const Menu = () => {
+  const { pathname } = useLocation();
+  console.log(pathname);
   return (
     <nav>
       <ul className="menu">
         <li>
           {" "}
-          <NavLink to="/" activeClassName="active">
+          <NavLink to="/" className={pathname === "/" ? "active" : ""}>
             home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/graphics" exact activeStyle={{ color: "red" }}>
-            graphics
-          </NavLink>
+          <NavLink to="/graphics">graphics</NavLink>
         </li>
         <li>
           {" "}
-          <Link to="/portraits">portraits</Link>
+          <NavLink to="/portraits">portraits</NavLink>
         </li>
         <li>
-          <Link to="/about">*about/contact* </Link>{" "}
+          <NavLink to="/about">*about/contact* </NavLink>{" "}
         </li>
         <li>
-          <Link to="/films">films </Link>
+          <NavLink to="/films">films </NavLink>
         </li>
       </ul>
     </nav>

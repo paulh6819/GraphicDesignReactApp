@@ -13,7 +13,7 @@ export default function CarouselItem({ imgUrl, imgTitle }) {
         src={imgUrl}
         alt={imgTitle}
         style={{
-          borderRadius: "6px",
+          borderRadius: "30px",
           objectFit: "contain",
           width: "100%",
           height: "100%",

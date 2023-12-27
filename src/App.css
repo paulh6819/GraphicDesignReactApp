@@ -2,18 +2,23 @@
     font-family: 'SpaceGrotesk';
     src: url('./fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf') format('truetype');
 }
+
 :root{
     --background-dark:black;
     --background-light:white;
     --color-text-dark-mode:white; 
     --color-text-light-mode:black; 
     --menu-text-color:  rgb(246, 217, 217);
+    font-family: 'SpaceGrotesk';
+    box-sizing: border-box;
 }
    /* color: aqua; */
 body, .dark-mode{
    background-color: var(--background-dark);
    color: var(--color-text-dark-mode);
     font-family: 'SpaceGrotesk';
+    /* transition: background-color 1.5s ease, color 1.5s ease; */
+ 
   
 }
 
@@ -21,6 +26,26 @@ body, .dark-mode{
     background-color:var( --background-light );
     color: var(--color-text-light-mode);
 }
+
+.toggleButton{
+    font-family: 'SpaceGrotesk';
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: white;
+    height: fit-content;
+    width: fit-content;
+    margin-right: 3rem;
+    margin-top: 1rem;
+    
+}
+
+.light-mode .toggleButton{
+     border: 1px solid black;
+     background-color: white;
+     color: black;
+}
+
 
 
 

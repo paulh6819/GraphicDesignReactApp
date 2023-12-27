@@ -10,19 +10,22 @@ import {
 const Portraits = () => {
   return (
     <div>
-      <h1>Portrait Page for Paul</h1>
+      {/* <h1>Portrait Page for Paul</h1> */}
       <Carousel
         cardDetails={arrayOfPortraitsForCarosel}
         className={"firstCaroselPortraits"}
       />
+      {/* <h1>lorem ipsom </h1> */}
       <Carousel
         cardDetails={arrayOfPortraitsFor2ndCaroselGoingInReverse}
         className={"secondPortraitsGoingInReverse"}
       />
+
       <Carousel
         cardDetails={arrayOfPortraitsFor3ndCaroselGoingRegularRotation}
-        className={"secondFastest"}
+        className={"thirdCaroselPortraits"}
       />
+      {/* <h2>some elegant interesting intiguing words</h2> */}
     </div>
   );
 };

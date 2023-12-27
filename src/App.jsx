@@ -23,6 +23,16 @@ function App() {
 
   const [theme, setTheme] = useState("dark");
   const [isActive, setIsActive] = useState("false");
+
+  const themeAnimation = useSpring({
+    backgroundColor:
+      theme === "dark"
+        ? "var(--background-dark),var(--color-text-dark-mode)"
+        : "var(--background-light)",
+
+    config: { duration: 700 },
+  });
+
   const toggleTheme = () => {
     if (theme === "dark") {
       setTheme("light");
@@ -52,43 +62,57 @@ function App() {
 
   return (
     <Router>
-      <div className={`App ${theme}-mode`}>
-        <button onClick={() => setIsActive(!isActive)}>
-          {" "}
-          click this for XS DEMO
-        </button>
-        <XS active={isActive} />
+      <animated.div style={themeAnimation} className={`App ${theme}-mode`}>
+        <div>
+          {/* <button onClick={() => setIsActive(!isActive)}>
+            {" "}
+            click this for XS DEMO
+          </button> */}
+          {/* <XS active={isActive} /> */}
+          <header
+            className="header"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100vw",
+              paddingLeft: "1rem",
+              paddingRight: "1rem",
+            }}
+          >
+            <div>
+              <h1>Paul Henderson</h1>
+              <h2>designer</h2>
+            </div>
+            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+            {/* <DemoAnimation /> */}
+          </header>
 
-        <h1>Paul Henderson</h1>
-        <h2>designer</h2>
-        <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
-        {/* <DemoAnimation /> */}
-
-        <Menu />
-        {/* <img src="./images/graphicdesignlogosmall.jpg" alt="" /> */}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Graphics />
-                <Art />
-                <Films />
-              </>
-            }
-          ></Route>
-          <Route path="/graphics" element={<Graphics />}></Route>
-          <Route path="/portraits" element={<Portraits />}></Route>
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/films" element={<Films />}></Route>
-        </Routes>
-        {/* <Checklist setList={setList} list={list} />
+          <Menu />
+          {/* <img src="./images/graphicdesignlogosmall.jpg" alt="" /> */}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Graphics />
+                  <Art />
+                  <Films />
+                </>
+              }
+            ></Route>
+            <Route path="/graphics" element={<Graphics />}></Route>
+            <Route path="/portraits" element={<Portraits />}></Route>
+            <Route path="/about" element={<About />}></Route>
+            <Route path="/films" element={<Films />}></Route>
+          </Routes>
+          {/* <Checklist setList={setList} list={list} />
       <input ref={submitButton}
         type="text" placeholder='email here' />
       <button onClick={() => {
         setList([...list, submitButton.current.value])
       }}>click me</button> */}
-      </div>
+        </div>
+      </animated.div>
     </Router>
   );
 }
@@ -100,3 +124,4 @@ export default App;
 // i want to be able to institute dark mode with a toggle
 // i want music from a cool song playing but off by default
 // all designs should be the same size I think. So remove the small graphic design examples and make or find cooler ones
+// fix the app overflow problem, because of the carosels

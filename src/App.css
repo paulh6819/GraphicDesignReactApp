@@ -46,7 +46,33 @@ body, .dark-mode{
      color: black;
 }
 
+/* Base styles for anchor tags - NEW */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: var(--menu-text-color); /* Default color - NEW */
+}
 
+/* Dark mode link styles - NEW */
+.dark-mode a, .dark-mode a:link, .dark-mode a:visited {
+  color: var(--color-text-dark-mode); /* Color for dark mode - NEW */
+}
+
+/* Light mode link styles - NEW */
+.light-mode a, .light-mode a:link, .light-mode a:visited {
+  color: var(--color-text-light-mode); /* Color for light mode - NEW */
+}
+
+.active {
+  color: rgb(0, 187, 255); /* Light blue color for the active link */
+}
+
+a:hover, a:visited:hover {
+  color: rgb(0, 187, 255); /* Light blue color on hover - Unchanged */
+}
+
+.menu li .active {
+  color: rgb(0, 187, 255); /* Light blue color */
+}
 
 
 /* @media (prefers-color-scheme: dark) {
@@ -58,34 +84,13 @@ body, .dark-mode{
    
   } */
 
-  @keyframes expandCircle {
-    0%{
-        r:300;
-        fill: blue;
-        cy: 500;
-    }
-    50%{
-        r:500;
-        fill: red;
-        cy: 300;
-    }
-    100%{
-        r:300;
-        fill: blue;
-        cy: 500;
-    }
 
     
 
 
-  }
+  
 
-  #svg_css_ex1:hover path {
-    d: path(
-        "M -8.4653702,-107.80871 H -85.823233 L -1.5378004,25.739445 -86.977828,161.59679 H -13.85348 L 36.948699,75.002164 87.750877,161.59679 H 160.87523 L 75.435198,25.739445 159.72063,-107.80871 H 82.362767 L 36.948699,-25.447599 Z"
-      
-    );
-  }
+
 
   @keyframes rotateCircle{
 

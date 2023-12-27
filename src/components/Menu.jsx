@@ -4,29 +4,33 @@ import "../App.css";
 import { useLocation, NavLink } from "react-router-dom";
 
 const Menu = () => {
-  const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <nav>
       <ul className="menu">
         <li>
-          {" "}
-          <NavLink to="/" className={pathname === "/" ? "active" : ""}>
-            home
+          <NavLink to="/" exact activeClassName="active">
+            Home
           </NavLink>
         </li>
         <li>
-          <NavLink to="/graphics">graphics</NavLink>
+          <NavLink to="/graphics" activeClassName="active">
+            Graphics
+          </NavLink>
         </li>
         <li>
-          {" "}
-          <NavLink to="/portraits">portraits</NavLink>
+          <NavLink to="/portraits" activeClassName="active">
+            Portraits
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/about">*about/contact* </NavLink>{" "}
+          <NavLink to="/about" activeClassName="active">
+            *About/Contact*
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/films">films </NavLink>
+          <NavLink to="/films" activeClassName="active">
+            Films
+          </NavLink>
         </li>
       </ul>
     </nav>
